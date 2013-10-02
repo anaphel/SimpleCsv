@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Allow you to export CSV file easily
+ * 
+ * @author Louis Hatier
+ */
 class SimpleCsv
 {
     private $_charset;
