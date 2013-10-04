@@ -59,7 +59,6 @@ class SimpleCsv
         header('Content-type: text/csv; charset=' . $this->_charset);
         header('Content-Disposition: attachment; filename="' . $fileName . '.csv"');
         echo implode($this->_eol, $this->_content);
-        exit;
     }
 
     /**
