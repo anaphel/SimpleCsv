@@ -6,7 +6,7 @@ This is a small class to export quickly CSV files.
 How to use it
 -------------------------
 
-Let's see a basic example :
+Let's see a basic example:
 
 ```php
 $header = array(
