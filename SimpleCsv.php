@@ -49,6 +49,16 @@ class SimpleCsv
     }
 
     /**
+     * Return the CSV content
+     * 
+     * @return string
+     */
+    public function getContent()
+    {
+        return implode($this->_eol, $this->_content);
+    }
+
+    /**
      * Show the CSV file
      * 
      * @param string $fileName
@@ -58,7 +68,18 @@ class SimpleCsv
     {
         header('Content-type: text/csv; charset=' . $this->_charset);
         header('Content-Disposition: attachment; filename="' . $fileName . '.csv"');
-        echo implode($this->_eol, $this->_content);
+        echo $this->getContent();
+    }
+
+    /**
+     * Save the CSV
+     * 
+     * @param string $location
+     * @return void
+     */
+    public function save($location)
+    {
+        file_put_contents($location, $this->getContent());
     }
 
     /**
