@@ -18,7 +18,7 @@ class SimpleCsv
      * @param string $charset
      * @param string $separator
      * @param string $_eol
-     * @return void
+     * @return SimpleCsv
      */
     public function __construct($charset = 'UTF-8', $separator = ';', $eol = "\r\n")
     {
