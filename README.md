@@ -20,5 +20,6 @@ $line = array(
 $csv = new SimpleCsv();
 $csv->writeLine($header);
 $csv->writeLine($line);
-$csv->show('thats-me');
+$csv->show('thats-me'); // download the file
+$csv->save('/tmp/thats-me.csv') // store the file
 ```
